@@ -49,7 +49,7 @@ with open("resulting_data.csv" , "w" ) as result_file:
         for line in lines[1:]:
             #line1 = line[2].replace("\n","")
             line2 = line.split(",")
-            string='{},{},{},{},{}'.format(int(line2[1]),int(line2[2]),get_pos(line2[0]),get_neg(line2[0]),-(get_neg(line2[0])+get_pos(line2[0])))
+            string='{},{},{},{},{}'.format(int(line2[1]),int(line2[2]),get_pos(line2[0]),get_neg(line2[0]),(get_pos(line2[0])-get_neg(line2[0])))
             print(string)
             result_file.write(string)
             result_file.write("\n")
